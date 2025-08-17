@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { SocialProof } from "@/components/social-proof";
+import { ProblemSection } from "@/components/problem-section";
+import { SolutionSection } from "@/components/solution-section";
+import { TechStack } from "@/components/tech-stack";
+import { CaseStudies } from "@/components/case-studies";
+import { PricingSection } from "@/components/pricing-section";
+import { ArrowDownIcon, ArrowRightIcon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -63,12 +70,14 @@ export default function Home() {
                   <a href="#contact">Book a call</a>
                 </Button>
 
-                <a
-                  href="#portfolio"
-                  className="inline-flex items-center text-black font-medium text-base hover:underline underline-offset-4 decoration-2 transition-all duration-200 px-2 py-4"
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-white text-black"
                 >
-                  View work
-                </a>
+                  Know more
+                  <ArrowDownIcon className="w-4 h-4" />
+                </Button>
               </div>
             </div>
 
@@ -87,6 +96,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Social Proof Section */}
+      <SocialProof />
+
+      {/* Problem Section */}
+      <ProblemSection />
+
+      {/* Solution Section */}
+      <SolutionSection />
+
+      {/* Tech Stack Section */}
+      <TechStack />
+
+      {/* Case Studies Section */}
+      <CaseStudies />
+
+      {/* Pricing Section */}
+      <PricingSection />
     </>
   );
 }
