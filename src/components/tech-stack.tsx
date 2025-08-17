@@ -67,16 +67,16 @@ const techStack = [
 export function TechStack() {
   return (
     <section
-      className="relative py-20 lg:py-32 bg-white"
+      className="relative py-12 sm:py-16 lg:py-20 xl:py-32 bg-white"
       aria-label="Technology stack and tools"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
+        <div className="text-center space-y-6 mb-12 sm:mb-14 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
             Built with proven tools
           </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-mono">
+          <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-mono">
             6 years of experience with these tools
           </p>
         </div>
@@ -103,7 +103,7 @@ export function TechStack() {
                     sizes="48px"
                   />
                 </div>
-                <span className="font-mono text-xs sm:text-sm text-gray-600 font-medium text-center group-hover:text-black transition-colors duration-200">
+                <span className="font-mono text-sm sm:text-sm text-gray-600 font-medium text-center group-hover:text-black transition-colors duration-200">
                   {tech.name}
                 </span>
               </div>
@@ -115,7 +115,7 @@ export function TechStack() {
         <div className="text-center mt-12">
           <div className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-full shadow-sm">
             <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-            <span className="text-sm font-medium text-gray-700 font-mono">
+            <span className="text-sm sm:text-base font-medium text-gray-700 font-mono">
               Production-ready since 2018
             </span>
           </div>

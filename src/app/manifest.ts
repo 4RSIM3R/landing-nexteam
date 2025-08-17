@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Muhammad Ilzam Mulkhaq - Fullstack Developer",
-    short_name: "Ilzam Dev",
+    name: "Nexteam Teknologi Indonesia - Your Fullstack MVP Partner",
+    short_name: "Nexteam",
     description:
-      "Expert fullstack developer specializing in 30-day MVP development",
+      "Professional software development company specializing in 30-day MVP development with enterprise-grade quality",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

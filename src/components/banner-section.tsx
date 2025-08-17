@@ -6,7 +6,7 @@ export const BannerSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden py-20"
+      className="relative min-h-screen flex items-center overflow-hidden py-12 sm:py-16 lg:py-20"
     >
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-[0.02]">
@@ -30,14 +30,20 @@ export const BannerSection = () => {
               {/* Trust Indicators */}
               <div className="flex flex-wrap gap-3 mb-6">
                 <div className="inline-flex items-center px-3 py-1.5 bg-subtle border border-subtle rounded-lg">
-                  <span className="text-sm font-medium">50+ Clients</span>
+                  <span className="text-sm sm:text-base font-medium">
+                    50+ Clients
+                  </span>
                 </div>
                 <div className="inline-flex items-center px-3 py-1.5 bg-subtle border border-subtle rounded-lg">
-                  <span className="text-sm font-medium">6+ Years</span>
+                  <span className="text-sm sm:text-base font-medium">
+                    6+ Years
+                  </span>
                 </div>
                 <div className="inline-flex items-center px-3 py-1.5 bg-subtle border border-subtle rounded-lg">
                   <CheckCircle className="w-4 h-4 mr-1.5 text-green-600" />
-                  <span className="text-sm font-medium">100% On-Time</span>
+                  <span className="text-sm sm:text-base font-medium">
+                    100% On-Time
+                  </span>
                 </div>
               </div>
 
@@ -51,7 +57,8 @@ export const BannerSection = () => {
                 <p className="text-xl-lead max-w-xl">
                   Battle-tested code. Enterprise-grade. AI-accelerated.
                   <span className="font-medium text-primary">
-                    {" "} Stop losing to competitors who ship faster.
+                    {" "}
+                    Stop losing to competitors who ship faster.
                   </span>
                 </p>
               </div>
@@ -77,7 +84,7 @@ export const BannerSection = () => {
               </div>
 
               {/* Social Proof Note */}
-              <p className="text-sm pt-2">
+              <p className="text-sm sm:text-base pt-2">
                 Join 50+ companies who chose speed over delays
               </p>
             </div>
@@ -99,12 +106,12 @@ export const BannerSection = () => {
                 <div className="flex items-center space-x-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary">30</div>
-                    <div className="text-xs">Days Average</div>
+                    <div className="text-xs sm:text-sm">Days Average</div>
                   </div>
                   <div className="w-px h-8 bg-border"></div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-600">98%</div>
-                    <div className="text-xs">Success Rate</div>
+                    <div className="text-xs sm:text-sm">Success Rate</div>
                   </div>
                 </div>
               </div>

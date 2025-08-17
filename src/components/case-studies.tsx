@@ -51,16 +51,16 @@ const caseStudies = [
 export function CaseStudies() {
   return (
     <section
-      className="relative py-20 lg:py-32 bg-white"
+      className="relative py-12 sm:py-16 lg:py-20 xl:py-32 bg-white"
       aria-label="Recent work and case studies"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
+        <div className="text-center space-y-6 mb-12 sm:mb-14 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
             Recent work
           </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
             Real projects, real results. Here's how we've helped businesses ship
             their MVPs successfully.
           </p>
@@ -90,13 +90,13 @@ export function CaseStudies() {
                 <div className="p-6 sm:p-8 flex-1 flex flex-col">
                   {/* Header */}
                   <div className="mb-6">
-                    <h3 className="text-xl sm:text-2xl font-bold text-black mb-3 group-hover:text-gray-800 transition-colors duration-200">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 group-hover:text-gray-800 transition-colors duration-200">
                       {study.title}
                     </h3>
 
                     {/* Timeline Badge */}
                     <div className="inline-flex items-center px-3 py-1 bg-white border border-gray-200 rounded-full">
-                      <span className="text-xs font-medium text-gray-600 uppercase tracking-wide">
+                      <span className="text-xs sm:text-sm font-medium text-gray-600 uppercase tracking-wide">
                         {study.timeline}
                       </span>
                     </div>
@@ -105,19 +105,19 @@ export function CaseStudies() {
                   {/* Challenge & Outcome */}
                   <div className="space-y-4 mb-6 flex-1">
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                      <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
                         Challenge
                       </h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                         {study.challenge}
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                      <h4 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
                         Results
                       </h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                         {study.outcome}
                       </p>
                     </div>
@@ -131,7 +131,7 @@ export function CaseStudies() {
                           <div className="font-mono font-bold text-lg text-black">
                             {value}
                           </div>
-                          <div className="text-xs text-gray-500 capitalize mt-1">
+                          <div className="text-xs sm:text-sm text-gray-500 capitalize mt-1">
                             {key}
                           </div>
                         </div>
@@ -140,7 +140,7 @@ export function CaseStudies() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="w-full bg-black text-white font-medium py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm">
+                  <button className="w-full bg-black text-white font-medium py-3 px-4 rounded-lg hover:bg-gray-800 transition-colors duration-200 text-sm sm:text-base">
                     View Case Study
                   </button>
                 </div>

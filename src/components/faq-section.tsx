@@ -35,12 +35,12 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="relative py-24 bg-white"
+      className="relative py-12 sm:py-16 lg:py-24 bg-white"
       aria-label="Frequently asked questions"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center space-y-6 mb-16">
+        <div className="text-center space-y-6 mb-12 sm:mb-14 lg:mb-16">
           <h2>Frequently Asked Questions</h2>
           <p className="text-lead max-w-3xl mx-auto">
             Get answers to common questions about our development process,
@@ -61,7 +61,7 @@ export function FAQSection() {
                   <h3 className="text-left">{item.question}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 pt-0">
-                  <p className="text-secondary">{item.answer}</p>
+                  <p className="text-gray-600">{item.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}

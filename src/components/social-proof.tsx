@@ -46,7 +46,7 @@ const metrics = [
 export function SocialProof() {
   return (
     <section
-      className="relative py-24 overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-24 overflow-hidden"
       aria-label="Social proof and client testimonials"
     >
       {/* Subtle Grid Background - matching hero section */}
@@ -64,10 +64,10 @@ export function SocialProof() {
       </div>
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Trust Statement - improved hierarchy */}
-        <div className="text-center space-y-16">
+        <div className="text-center space-y-12 sm:space-y-14 lg:space-y-16">
           {/* Header with better visual hierarchy */}
           <div className="space-y-4">
-            <h1 className="text-xs font-semibold uppercase tracking-widest">
+            <h1 className="text-sm sm:text-xs font-semibold uppercase tracking-widest">
               Trusted by 50+ Companies
             </h1>
             <p className="text-lead max-w-2xl mx-auto">
@@ -107,7 +107,7 @@ export function SocialProof() {
                     />
                     {/* Subtle overlay for better readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent flex items-end justify-center pb-2">
-                      <span className="text-white text-xs font-medium text-center px-2 drop-shadow-sm">
+                      <span className="text-white text-xs sm:text-sm font-medium text-center px-2 drop-shadow-sm">
                         {client.name}
                       </span>
                     </div>

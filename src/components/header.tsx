@@ -44,7 +44,7 @@ export const Header = () => {
                   : "text-lg sm:text-xl lg:text-2xl"
               }`}
             >
-              ILZAM
+              NEXTEAM
             </a>
           </div>
 

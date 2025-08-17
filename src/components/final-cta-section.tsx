@@ -7,16 +7,16 @@ export function FinalCTASection() {
   return (
     <section
       id="contact"
-      className="relative py-20 lg:py-32 bg-white"
+      className="relative py-12 sm:py-16 lg:py-20 xl:py-32 bg-white"
       aria-label="Ready to start your project"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
+        <div className="text-center space-y-4 mb-12 sm:mb-14 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
             Ready to start?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Let's discuss how we can bring your vision to life
           </p>
         </div>
@@ -29,10 +29,10 @@ export function FinalCTASection() {
               <div className="text-center space-y-8">
                 {/* Main CTA Text */}
                 <div className="space-y-4">
-                  <h4 className="text-2xl font-semibold text-black">
+                  <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-black">
                     Book a 30-minute call to discuss your project
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     No sales pitch, just a technical discussion about your
                     requirements, timeline, and how we can help you succeed.
                   </p>
@@ -45,8 +45,12 @@ export function FinalCTASection() {
                       <Clock className="w-5 h-5 text-gray-600" />
                     </div>
                     <div className="text-center">
-                      <p className="font-medium text-black">30 Minutes</p>
-                      <p className="text-sm text-gray-500">Quick & focused</p>
+                      <p className="text-sm sm:text-base font-medium text-black">
+                        30 Minutes
+                      </p>
+                      <p className="text-xs sm:text-sm text-gray-500">
+                        Quick & focused
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-col items-center space-y-2">
@@ -54,8 +58,10 @@ export function FinalCTASection() {
                       <Users className="w-5 h-5 text-gray-600" />
                     </div>
                     <div className="text-center">
-                      <p className="font-medium text-black">1-on-1 Call</p>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm sm:text-base font-medium text-black">
+                        1-on-1 Call
+                      </p>
+                      <p className="text-xs sm:text-sm text-gray-500">
                         Personal attention
                       </p>
                     </div>
@@ -65,10 +71,12 @@ export function FinalCTASection() {
                       <Calendar className="w-5 h-5 text-gray-600" />
                     </div>
                     <div className="text-center">
-                      <p className="font-medium text-black">
+                      <p className="text-sm sm:text-base font-medium text-black">
                         Free Consultation
                       </p>
-                      <p className="text-sm text-gray-500">No commitment</p>
+                      <p className="text-xs sm:text-sm text-gray-500">
+                        No commitment
+                      </p>
                     </div>
                   </div>
                 </div>

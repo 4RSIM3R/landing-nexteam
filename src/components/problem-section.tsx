@@ -25,7 +25,7 @@ export function ProblemSection() {
 
   return (
     <section
-      className="relative py-24 overflow-hidden"
+      className="relative py-12 sm:py-16 lg:py-24 overflow-hidden"
       aria-label="Common MVP development challenges"
     >
       {/* Subtle Grid Background - matching previous sections */}
@@ -72,7 +72,7 @@ export function ProblemSection() {
                   <h3>{problem.title}</h3>
                   <p>
                     {problem.description}{" "}
-                    <span className="text-sm text-red-600 font-medium">
+                    <span className="text-sm sm:text-base text-red-600 font-medium">
                       → {problem.impact}
                     </span>
                   </p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -10,19 +11,29 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="border-t border-gray-200 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Personal Info */}
+            {/* Company Info */}
             <div className="md:col-span-2 text-center md:text-left">
-              <h2 className="text-lg font-semibold text-gray-900 mb-2">
-                Muhammad Ilzam Mulkhaq
+              <div className="flex items-center justify-center md:justify-start mb-4">
+                <Image
+                  src="/logo.webp"
+                  alt="Nexteam Teknologi Indonesia Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto"
+                  priority
+                />
+              </div>
+              <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+                Nexteam Teknologi Indonesia
               </h2>
-              <p className="text-sm text-gray-600 mb-4">
-                ilzammulkhaq85@gmail.com
+              <p className="text-sm sm:text-base text-gray-600 mb-4">
+                hello@nexteam.id
               </p>
 
               {/* Social Links */}
               <div className="flex justify-center md:justify-start gap-6">
                 <Link
-                  href="https://www.linkedin.com/in/ilzam-mulkhaq/"
+                  href="https://www.linkedin.com/company/nexteam-teknologi-indonesia/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline-offset-4 hover:underline"
@@ -31,7 +42,7 @@ export const Footer = () => {
                 </Link>
                 <span className="text-gray-300">|</span>
                 <Link
-                  href="https://github.com/4RSIM3R"
+                  href="https://github.com/nexteam-id"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline-offset-4 hover:underline"
@@ -40,7 +51,7 @@ export const Footer = () => {
                 </Link>
                 <span className="text-gray-300">|</span>
                 <Link
-                  href="mailto:ilzammulkhaq85@gmail.com"
+                  href="mailto:hello@nexteam.id"
                   className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline-offset-4 hover:underline"
                 >
                   Email
@@ -48,26 +59,34 @@ export const Footer = () => {
               </div>
             </div>
 
-            {/* Partners Links */}
+            {/* Company Links */}
             <div className="text-center md:text-left">
-              <h3 className="text-sm font-medium text-gray-900 mb-4">
-                Partners
+              <h3 className="text-sm sm:text-base font-medium text-gray-900 mb-4">
+                Company
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="#about"
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    Elux Space
+                    About Us
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#team"
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    Incbuss
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#careers"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    Careers
                   </Link>
                 </li>
               </ul>
@@ -75,13 +94,13 @@ export const Footer = () => {
 
             {/* Services Links */}
             <div className="text-center md:text-left">
-              <h3 className="text-sm font-medium text-gray-900 mb-4">
+              <h3 className="text-sm sm:text-base font-medium text-gray-900 mb-4">
                 Services
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="#services"
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
                     MVP Development
@@ -89,26 +108,26 @@ export const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#services"
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    Custom Software Development
+                    Enterprise Software
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#services"
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    IT Outsource
+                    AI-Powered Development
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#services"
                     className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
                   >
-                    IT Consultant
+                    Tech Consulting
                   </Link>
                 </li>
               </ul>

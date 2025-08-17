@@ -117,12 +117,12 @@ const solutions = [
 export function SolutionSection() {
   return (
     <section
-      className="relative py-24 bg-white"
+      className="relative py-12 sm:py-16 lg:py-24 bg-white"
       aria-label="Our solution approach"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center space-y-6 mb-20">
+        <div className="text-center space-y-6 mb-12 sm:mb-16 lg:mb-20">
           <h2>A different approach</h2>
           <p className="text-lead max-w-2xl mx-auto">
             Why settle for generic solutions when you can have a

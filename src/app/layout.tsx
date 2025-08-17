@@ -11,64 +11,61 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ilzam.nexteam.id"),
+  metadataBase: new URL("https://nexteam.id"),
   title: {
-    default:
-      "Ship your MVP in 30 days | Muhammad Ilzam Mulkhaq - Fullstack Developer",
-    template: "%s | Muhammad Ilzam Mulkhaq",
+    default: "Ship your MVP in 30 days | Nexteam - Your Fullstack MVP Partner",
+    template: "%s | Nexteam Teknologi Indonesia",
   },
   description:
-    "From idea to production with battle-tested code and AI acceleration. Expert fullstack developer with 6+ years experience and 15+ MVPs delivered. Book your free consultation today.",
+    "From idea to production with battle-tested code and AI acceleration. Nexteam Teknologi Indonesia delivers enterprise-grade MVPs in 30 days with expert fullstack development team. Book your free consultation today.",
   keywords: [
-    "fullstack developer",
-    "MVP development",
-    "React",
-    "Laravel",
-    "Flutter",
-    "Indonesia developer",
-    "startup development",
+    "MVP development Indonesia",
+    "Nexteam Teknologi Indonesia",
+    "fullstack development company",
+    "React development",
+    "Laravel development",
+    "Flutter development",
+    "startup development Indonesia",
     "AI-powered development",
-    "web development",
-    "mobile development",
+    "web development Indonesia",
+    "mobile app development",
     "rapid prototyping",
-    "software consultant",
+    "software development company",
+    "tech consulting Indonesia",
+    "enterprise software development",
   ],
-  authors: [
-    { name: "Muhammad Ilzam Mulkhaq", url: "https://ilzam.nexteam.id" },
-  ],
-  creator: "Muhammad Ilzam Mulkhaq",
-  publisher: "Muhammad Ilzam Mulkhaq",
+  authors: [{ name: "Nexteam Teknologi Indonesia", url: "https://nexteam.id" }],
+  creator: "Nexteam Teknologi Indonesia",
+  publisher: "Nexteam Teknologi Indonesia",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title:
-      "Ship your MVP in 30 days | Muhammad Ilzam Mulkhaq - Fullstack Developer",
+    title: "Ship your MVP in 30 days | Nexteam - Your Fullstack MVP Partner",
     description:
-      "From idea to production with battle-tested code and AI acceleration. Expert fullstack developer with 6+ years experience and 15+ MVPs delivered. Book your free consultation today.",
-    url: "https://ilzam.nexteam.id",
-    siteName: "Muhammad Ilzam Mulkhaq Portfolio",
+      "From idea to production with battle-tested code and AI acceleration. Nexteam Teknologi Indonesia delivers enterprise-grade MVPs in 30 days with expert fullstack development team. Book your free consultation today.",
+    url: "https://nexteam.id",
+    siteName: "Nexteam Teknologi Indonesia",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://ilzam.nexteam.id/og-image.png",
+        url: "https://nexteam.id/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Muhammad Ilzam Mulkhaq - Fullstack Developer",
+        alt: "Nexteam Teknologi Indonesia - Your Fullstack MVP Partner",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Ship your MVP in 30 days | Muhammad Ilzam Mulkhaq - Fullstack Developer",
+    title: "Ship your MVP in 30 days | Nexteam - Your Fullstack MVP Partner",
     description:
-      "From idea to production with battle-tested code and AI acceleration. Expert fullstack developer with 6+ years experience and 15+ MVPs delivered. Book your free consultation today.",
-    creator: "@add_yours_here",
-    images: ["https://ilzam.nexteam.id/og-image.png"],
+      "From idea to production with battle-tested code and AI acceleration. Nexteam Teknologi Indonesia delivers enterprise-grade MVPs in 30 days with expert fullstack development team. Book your free consultation today.",
+    creator: "@nexteam_id",
+    images: ["https://nexteam.id/og-image.png"],
   },
   robots: {
     index: true,
@@ -90,7 +87,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
   alternates: {
-    canonical: "https://ilzam.nexteam.id",
+    canonical: "https://nexteam.id",
   },
   category: "technology",
 };
@@ -102,41 +99,45 @@ export default function RootLayout({
 }>) {
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Muhammad Ilzam Mulkhaq",
-    jobTitle: "Fullstack Developer",
+    "@type": "Organization",
+    name: "Nexteam Teknologi Indonesia",
+    alternateName: "Nexteam",
     description:
-      "Expert fullstack developer with 6+ years experience specializing in 30-day MVP development",
-    url: "https://ilzam.nexteam.id",
+      "Professional software development company specializing in 30-day MVP development with AI-powered solutions and enterprise-grade quality",
+    url: "https://nexteam.id",
+    logo: "https://nexteam.id/logo.png",
     sameAs: [
-      "https://github.com/4RSIM3R",
-      "https://www.linkedin.com/in/ilzam-mulkhaq/",
-      "https://www.nexteam.id/",
+      "https://github.com/nexteam-id",
+      "https://www.linkedin.com/company/nexteam-teknologi-indonesia/",
     ],
-    knowsAbout: [
-      "React",
-      "Laravel",
-      "Flutter",
-      "MVP Development",
-      "Fullstack Development",
-      "AI-powered Development",
-    ],
-    hasOccupation: {
-      "@type": "Occupation",
-      name: "Fullstack Developer",
-      description: "Specializes in rapid MVP development and startup solutions",
-    },
-    alumniOf: "Politeknik Negeri Malang",
+    foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
       addressCountry: "Indonesia",
+      addressRegion: "East Java",
     },
-    email: "ilzammulkhaq85@gmail.com",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hello@nexteam.id",
+      contactType: "Business Inquiries",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Indonesia",
+    },
+    serviceType: [
+      "MVP Development",
+      "Fullstack Development",
+      "AI-powered Development",
+      "Web Development",
+      "Mobile App Development",
+      "Software Consulting",
+    ],
     offers: {
       "@type": "Service",
       name: "30-Day MVP Development",
       description:
-        "Turn your idea into MVP in 30 days with AI-powered development and proven boilerplates",
+        "Transform your idea into production-ready MVP in 30 days with battle-tested code, AI acceleration, and enterprise-grade quality",
     },
   };
 
@@ -144,11 +145,20 @@ export default function RootLayout({
     <html lang="en-US">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ilzam.nexteam.id" />
+        <link rel="canonical" href="https://nexteam.id" />
         <meta name="geo.region" content="ID" />
         <meta name="geo.country" content="Indonesia" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
+        <meta name="rating" content="general" />
+        <meta name="distribution" content="global" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

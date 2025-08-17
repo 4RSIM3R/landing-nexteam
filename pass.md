@@ -4,5 +4,7 @@ dont throw bloated comment, readme or anything that make code is  garbage and sp
 
 # Award-Winning Landing Page Structure: Nexteam Your Fullstack MVP Partner
 
-- basically this landing page just my personal page
-- but turn into my company instead, nexteam 
+- make sure on mobile it has a correct font sizing, to make sure read-ability and better user experience
+- dont change the content, just check the font on mobile is that already comfort to read
+- not too big and not too small
+- follow best oractices on mobile sized typhography

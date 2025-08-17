@@ -116,13 +116,16 @@ export function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="relative py-20 lg:py-32 bg-white">
+    <section
+      id="pricing"
+      className="relative py-12 sm:py-16 lg:py-20 xl:py-32 bg-white"
+    >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
+        <div className="text-center space-y-6 mb-12 sm:mb-14 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight">
             Fair and transparent pricing
           </h2>
-          <p className="text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-500 max-w-3xl mx-auto leading-relaxed">
             Calculate your project budget based on team composition and
             timeline. No hidden fees, no surprises—just honest pricing for
             quality development.
@@ -135,7 +138,7 @@ export function PricingSection() {
               <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <Plus className="w-5 h-5 text-gray-600" />
-                  <h3 className="text-xl font-semibold text-black">
+                  <h3 className="text-lg sm:text-xl font-semibold text-black">
                     Add Team Members
                   </h3>
                 </div>
@@ -181,7 +184,7 @@ export function PricingSection() {
               <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <Users className="w-5 h-5 text-gray-600" />
-                  <h3 className="text-xl font-semibold text-black">
+                  <h3 className="text-lg sm:text-xl font-semibold text-black">
                     Team Composition
                   </h3>
                 </div>
@@ -224,7 +227,7 @@ export function PricingSection() {
                               )
                             }
                           >
-                            <SelectTrigger className="w-20">
+                            <SelectTrigger className="w-full sm:w-20">
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
@@ -249,7 +252,7 @@ export function PricingSection() {
                               updateTeamMember(index, "months", parseInt(value))
                             }
                           >
-                            <SelectTrigger className="w-24">
+                            <SelectTrigger className="w-full sm:w-24">
                               <SelectValue />
                             </SelectTrigger>
                             <SelectContent>
@@ -292,7 +295,7 @@ export function PricingSection() {
               <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <Calendar className="w-5 h-5 text-gray-600" />
-                  <h3 className="text-xl font-semibold text-black">
+                  <h3 className="text-lg sm:text-xl font-semibold text-black">
                     Additional Services
                   </h3>
                 </div>
@@ -334,7 +337,7 @@ export function PricingSection() {
                                   updateAddon(index, "months", parseInt(value))
                                 }
                               >
-                                <SelectTrigger className="w-24">
+                                <SelectTrigger className="w-full sm:w-24">
                                   <SelectValue />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -368,7 +371,7 @@ export function PricingSection() {
               <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-lg">
                 <div className="flex items-center gap-3 mb-6">
                   <Calculator className="w-5 h-5 text-gray-600" />
-                  <h3 className="text-xl font-semibold text-black">
+                  <h3 className="text-lg sm:text-xl font-semibold text-black">
                     Budget Estimation
                   </h3>
                 </div>
@@ -477,14 +480,17 @@ export function PricingSection() {
               </div>
 
               <div className="mt-6 bg-white rounded-xl p-6 border border-gray-200">
-                <h4 className="font-semibold text-black mb-3">
+                <h4 className="text-base sm:text-lg font-semibold text-black mb-3">
                   Don't know where to start?
                 </h4>
-                <p className="text-sm text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Our team can help you determine the right composition and
                   timeline for your project.
                 </p>
-                <Button variant="outline" className="w-full text-sm">
+                <Button
+                  variant="outline"
+                  className="w-full text-sm sm:text-base"
+                >
                   Let's have a talk
                 </Button>
               </div>
