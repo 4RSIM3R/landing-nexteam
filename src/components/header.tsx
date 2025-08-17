@@ -18,10 +18,10 @@ export const Header = () => {
   }, []);
 
   const menuItems = [
-    { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
-    { label: "Portfolio", href: "#portfolio" },
-    { label: "About", href: "#about" },
+    { label: "Home", href: "/" },
+    { label: "Service", href: "/service" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "About", href: "/about" },
   ];
 
   return (
