@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Users } from "lucide-react";
+import Link from "next/link";
 
 export function FinalCTASection() {
   return (
@@ -84,20 +85,14 @@ export function FinalCTASection() {
                 {/* CTA Button */}
                 <div className="pt-4">
                   <Button
+                    asChild
                     size="lg"
                     className="bg-black hover:bg-black/90 text-white font-medium px-10 py-4 text-base rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-sm"
-                    asChild
                   >
-                    <a
-                      href="https://calendly.com/your-calendar"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Schedule a 30-minute technical discussion call"
-                      className="inline-flex items-center gap-2"
-                    >
+                    <Link href="https://calendly.com/ilzam/project-discussion">
                       <Calendar className="w-4 h-4" />
                       Schedule call
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>

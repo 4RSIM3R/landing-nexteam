@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,11 +66,13 @@ export const Header = () => {
           {/* Contact Button & Mobile Menu Toggle */}
           <div className="flex items-center space-x-3">
             <Button
+              asChild
               variant="default"
               className="hidden sm:inline-flex transition-all duration-300 hover:scale-105 hover:shadow-lg bg-black hover:bg-black/90 text-white font-medium px-6"
-              asChild
             >
-              <a href="#contact">Book a call</a>
+              <Link href="https://calendly.com/ilzam/project-discussion">
+                Book a call
+              </Link>
             </Button>
 
             {/* Mobile menu button */}
@@ -123,6 +126,7 @@ export const Header = () => {
                 </a>
               ))}
               <Button
+                asChild
                 variant="default"
                 className={`mt-3 mx-4 transition-all duration-300 hover:scale-105 bg-black hover:bg-black/90 text-white font-medium transform ${
                   isMobileMenuOpen
@@ -130,9 +134,10 @@ export const Header = () => {
                     : "translate-x-4 opacity-0"
                 }`}
                 style={{ transitionDelay: `${menuItems.length * 50}ms` }}
-                asChild
               >
-                <a href="#contact">Book a call</a>
+                <Link href="https://calendly.com/ilzam/project-discussion">
+                  Book a call
+                </Link>
               </Button>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { ArrowDownIcon, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export const BannerSection = () => {
   return (
@@ -66,11 +67,13 @@ export const BannerSection = () => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Button
+                  asChild
                   size="lg"
                   className="bg-black hover:bg-black/90 text-white font-medium px-8 py-4 text-base rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg hover:shadow-xl"
-                  asChild
                 >
-                  <a href="#contact">Schedule Strategy Call</a>
+                  <Link href="https://calendly.com/ilzam/project-discussion">
+                    Schedule Strategy Call
+                  </Link>
                 </Button>
 
                 <Button
