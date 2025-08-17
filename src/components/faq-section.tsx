@@ -35,16 +35,14 @@ export function FAQSection() {
   return (
     <section
       id="faq"
-      className="relative py-20 lg:py-32 bg-white"
+      className="relative py-24 bg-white"
       aria-label="Frequently asked questions"
     >
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2>Frequently Asked Questions</h2>
+          <p className="text-lead max-w-3xl mx-auto">
             Get answers to common questions about our development process,
             project complexity, and system integrations.
           </p>
@@ -57,15 +55,13 @@ export function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border-b border-gray-200 last:border-b-0"
+                className="border-b border-subtle last:border-b-0"
               >
                 <AccordionTrigger className="py-6 text-left hover:no-underline transition-colors duration-200 [&[data-state=open]>svg]:rotate-180">
-                  <h3 className="text-lg sm:text-xl font-semibold text-black leading-relaxed text-left">
-                    {item.question}
-                  </h3>
+                  <h3 className="text-left">{item.question}</h3>
                 </AccordionTrigger>
                 <AccordionContent className="pb-6 pt-0">
-                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                  <p className="text-secondary">{item.answer}</p>
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -159,11 +159,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased font-sans`}>
         <div className="min-h-screen">
           <Header />
-          <main className="flex-1">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              {children}
-            </div>
-          </main>
+          <main className="flex-1">{children}</main>
           <Footer />
         </div>
       </body>

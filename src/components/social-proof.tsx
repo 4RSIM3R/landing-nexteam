@@ -46,7 +46,7 @@ const metrics = [
 export function SocialProof() {
   return (
     <section
-      className="relative py-20 overflow-hidden"
+      className="relative py-24 overflow-hidden"
       aria-label="Social proof and client testimonials"
     >
       {/* Subtle Grid Background - matching hero section */}
@@ -67,17 +67,20 @@ export function SocialProof() {
         <div className="text-center space-y-16">
           {/* Header with better visual hierarchy */}
           <div className="space-y-4">
-            <h1 className="text-xs font-semibold text-gray-500 uppercase tracking-widest">
-              Trusted Partnership
+            <h1 className="text-xs font-semibold uppercase tracking-widest">
+              Trusted by 50+ Companies
             </h1>
-            <h2 className="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lead max-w-2xl mx-auto">
               Trusted by teams at{" "}
               <span className="font-medium text-black">Bukit Vista</span>,{" "}
               <span className="font-medium text-black">DOT Indonesia</span>, and{" "}
               <span className="font-medium text-black">
                 government institutions
+              </span>{" "}
+              <span className="text-green-600 font-medium">
+                — companies that chose speed over uncertainty.
               </span>
-            </h2>
+            </p>
           </div>
 
           {/* Client Logos Marquee - improved spacing */}
@@ -94,7 +97,7 @@ export function SocialProof() {
                   role="img"
                   aria-label={`${client.name} logo`}
                 >
-                  <div className="relative h-14 w-36 bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm border border-gray-100/50">
+                  <div className="relative h-14 w-36 bg-white/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-sm border border-subtle">
                     <Image
                       src={client.logo}
                       alt={`${client.name} logo`}
@@ -116,13 +119,13 @@ export function SocialProof() {
 
           {/* Metrics - sentence format */}
           <div className="space-y-6">
-            <div className="w-12 h-px bg-gray-300 mx-auto"></div>
+            <div className="w-12 h-px bg-border mx-auto"></div>
             <div
               className="max-w-3xl mx-auto text-center"
               role="region"
               aria-label="Company performance metrics"
             >
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lead">
                 Supporting{" "}
                 <span className="font-mono text-xl font-bold text-black">
                   {metrics[0].number}

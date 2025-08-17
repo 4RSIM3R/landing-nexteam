@@ -5,7 +5,7 @@ export function ProblemSection() {
   const problems = [
     {
       icon: <Clock className="w-5 h-5" />,
-      title: "Endless Development Cycles",
+      title: "Endless Development",
       description: "6+ month development cycles that kill momentum",
       impact: "Lost market opportunity",
     },
@@ -18,14 +18,14 @@ export function ProblemSection() {
     {
       icon: <DollarSign className="w-5 h-5" />,
       title: "Budget Drain",
-      description: "Budget overruns that drain runway",
+      description: "Budget overruns that drain your runway",
       impact: "Running out of resources",
     },
   ];
 
   return (
     <section
-      className="relative py-20 overflow-hidden"
+      className="relative py-24 overflow-hidden"
       aria-label="Common MVP development challenges"
     >
       {/* Subtle Grid Background - matching previous sections */}
@@ -45,11 +45,13 @@ export function ProblemSection() {
         <div className="max-w-6xl mx-auto">
           {/* Main Headline */}
           <div className="text-center mb-16">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight tracking-tight mb-4">
-              Most MVPs fail before they start
-            </h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Common pitfalls that turn promising ideas into costly failures
+            <h2 className="mb-6">Most MVPs fail before they start</h2>
+            <p className="text-lead max-w-2xl mx-auto">
+              <span className="text-red-600 font-medium">
+                90% of startups fail
+              </span>{" "}
+              due to these common pitfalls that turn promising ideas into costly
+              failures
             </p>
           </div>
 
@@ -58,7 +60,7 @@ export function ProblemSection() {
             {problems.map((problem, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-[0_1px_3px_0_rgb(0_0_0_/_0.05)] border border-gray-100/50 hover:shadow-[0_4px_12px_0_rgb(0_0_0_/_0.08)] transition-all duration-300 group"
+                className="bg-white rounded-xl p-8 shadow-[0_1px_3px_0_rgb(0_0_0_/_0.05)] border border-subtle hover-lift group"
               >
                 {/* Icon */}
                 <div className="flex items-center justify-center w-10 h-10 bg-red-50 text-red-600 rounded-lg mb-6 group-hover:bg-red-100 transition-colors duration-300">
@@ -67,10 +69,8 @@ export function ProblemSection() {
 
                 {/* Content */}
                 <div className="space-y-4">
-                  <h4 className="text-xl font-semibold text-black leading-tight">
-                    {problem.title}
-                  </h4>
-                  <p className="text-gray-700 leading-relaxed">
+                  <h3>{problem.title}</h3>
+                  <p>
                     {problem.description}{" "}
                     <span className="text-sm text-red-600 font-medium">
                       → {problem.impact}
@@ -83,8 +83,11 @@ export function ProblemSection() {
 
           {/* Transition to Solution */}
           <div className="text-center">
-            <Button variant="outline">
-              But there's a better way
+            <Button
+              variant="outline"
+              className="text-green-600 border-green-600 hover:bg-green-50"
+            >
+              But there's a better way →
               <ArrowDownIcon className="w-4 h-4" />
             </Button>
           </div>
