@@ -4,24 +4,23 @@ dont throw bloated comment, readme or anything that make code is  garbage and sp
 
 # Award-Winning Landing Page Structure: Your Fullstack MVP Partner
 
-## 7. SIMPLE PRICING
-**Psychology: Clear options without complexity**
+## 11. FOOTER (Minimal)
+**Psychology: Clean finish**
 
-### Headline: "Fair and transaparent pricing"
+### Simple centered footer:
+- "Muhammad Ilzam Mulkhaq"
+- "ilzammulkhaq85@gmail.com"
+- Links: "LinkedIn" | "GitHub" | "Email"
+- "© 2025"
 
-a simple section that will demonstrate the pricing based on headcount and how long the development phase will be, 
-this is like a simple calculator, to calculate final estimation budget leads should have, with this simple rules : 
+### Visual Elements:
+- Thin gray top border
+- Small, clean typography
+- No additional graphics
 
-- 1 fullstack (1 month) : $500
-- 1 devops (1 month) : $750
-- 1 project manager (1 month) : $500
-- 1 quality assurance (1 month) : $500
+also add to several list of partner that i had
 
-and we also have several addons including : 
+---
 
-- dedicated design team : start from $1000 / month
-- dedicated seo / digital marketing team : start from $1000 / month
 
-you can pick as you want, and how long, if you dont know where to start, lets have a talk.
-
-place it below the recent work section, refer to previous section to make it consistent and align with previous section and make sure it responsive and optimize on page seo such as h1, h2, structure etc needed to optimize the seo is. and ui / ux best practice. for logo just use a placeholder from unsplash.
+place it on footer component, refer to previous section to make it consistent and align with previous section and make sure it responsive and optimize on page seo such as h1, h2, structure etc needed to optimize the seo is. and ui / ux best practice. for logo just use a placeholder from unsplash.

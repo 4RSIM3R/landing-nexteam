@@ -1,66 +1,119 @@
-import { AtSignIcon, GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer
-      className="w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="w-full bg-white"
       role="contentinfo"
       aria-label="Site footer"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center py-4 sm:py-6 gap-4">
-          <div className="text-center sm:text-left">
-            <p className="text-sm text-muted-foreground">
-              © {currentYear}{" "}
-              <span className="text-foreground font-medium">
+        <div className="border-t border-gray-200 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Personal Info */}
+            <div className="md:col-span-2 text-center md:text-left">
+              <h2 className="text-lg font-semibold text-gray-900 mb-2">
                 Muhammad Ilzam Mulkhaq
-              </span>
-              . All rights reserved.
-            </p>
+              </h2>
+              <p className="text-sm text-gray-600 mb-4">
+                ilzammulkhaq85@gmail.com
+              </p>
+
+              {/* Social Links */}
+              <div className="flex justify-center md:justify-start gap-6">
+                <Link
+                  href="https://www.linkedin.com/in/ilzam-mulkhaq/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline-offset-4 hover:underline"
+                >
+                  LinkedIn
+                </Link>
+                <span className="text-gray-300">|</span>
+                <Link
+                  href="https://github.com/4RSIM3R"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline-offset-4 hover:underline"
+                >
+                  GitHub
+                </Link>
+                <span className="text-gray-300">|</span>
+                <Link
+                  href="mailto:ilzammulkhaq85@gmail.com"
+                  className="text-sm text-gray-600 hover:text-gray-900 transition-colors underline-offset-4 hover:underline"
+                >
+                  Email
+                </Link>
+              </div>
+            </div>
+
+            {/* Partners Links */}
+            <div className="text-center md:text-left">
+              <h3 className="text-sm font-medium text-gray-900 mb-4">
+                Partners
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    Elux Space
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    Incbuss
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Services Links */}
+            <div className="text-center md:text-left">
+              <h3 className="text-sm font-medium text-gray-900 mb-4">
+                Services
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    MVP Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    Custom Software Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    IT Outsource
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                  >
+                    IT Consultant
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <nav
-            className="flex justify-center sm:justify-end gap-4"
-            aria-label="Social media links"
-          >
-            <Link
-              href="https://www.nexteam.id/"
-              className="inline-flex items-center justify-center size-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Go to homepage"
-            >
-              <AtSignIcon className="size-4" aria-hidden="true" />
-            </Link>
-
-            <Link
-              href="https://github.com/4RSIM3R"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center size-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Visit GitHub profile (opens in new tab)"
-            >
-              <GithubIcon className="size-4" aria-hidden="true" />
-            </Link>
-
-            <Link
-              href="https://www.linkedin.com/in/ilzam-mulkhaq/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center size-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Visit LinkedIn profile (opens in new tab)"
-            >
-              <LinkedinIcon className="size-4" aria-hidden="true" />
-            </Link>
-
-            <Link
-              href="mailto:ilzammulkhaq85@gmail.com"
-              className="inline-flex items-center justify-center size-8 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              aria-label="Send email to ilzammulkhaq85@gmail.com"
-            >
-              <MailIcon className="size-4" aria-hidden="true" />
-            </Link>
-          </nav>
         </div>
       </div>
     </footer>

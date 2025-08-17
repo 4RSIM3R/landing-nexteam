@@ -3,7 +3,14 @@
 import type React from "react";
 import { useState } from "react";
 import { Button } from "./ui/button";
-import { Plus, Minus, Calculator, Users, Calendar } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { Plus, Trash2, Calculator, Users, Calendar } from "lucide-react";
 
 interface TeamMember {
   role: string;
@@ -109,13 +116,8 @@ export function PricingSection() {
   };
 
   return (
-    <section
-      id="pricing"
-      className="relative py-20 lg:py-32 bg-white"
-      aria-label="Pricing calculator and budget estimation"
-    >
+    <section id="pricing" className="relative py-20 lg:py-32 bg-white">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight">
             Fair and transparent pricing
@@ -129,174 +131,30 @@ export function PricingSection() {
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Calculator Section */}
             <div className="space-y-8">
-              {/* Team Members */}
               <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
-                  <Users className="w-5 h-5 text-gray-600" />
+                  <Plus className="w-5 h-5 text-gray-600" />
                   <h3 className="text-xl font-semibold text-black">
-                    Team Composition
+                    Add Team Members
                   </h3>
                 </div>
 
-                <div className="space-y-4">
-                  {teamMembers.map((member, index) => (
-                    <div
-                      key={index}
-                      className="bg-gray-50 rounded-lg p-4 space-y-4 border border-gray-200"
-                    >
-                      <div className="flex items-center justify-between">
-                        <h4 className="font-medium text-gray-900">
-                          Team Member {index + 1}
-                        </h4>
-                        <button
-                          onClick={() => removeTeamMember(index)}
-                          disabled={teamMembers.length === 1}
-                          className="p-1 text-gray-400 hover:text-red-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                          aria-label="Remove team member"
-                        >
-                          <Minus className="w-4 h-4" />
-                        </button>
-                      </div>
+                {(() => {
+                  const selectedRoles = teamMembers.map(
+                    (member) => member.role
+                  );
+                  const availableRoles = roleOptions.filter(
+                    (role) => !selectedRoles.includes(role.key)
+                  );
 
-                      <div className="grid sm:grid-cols-3 gap-4">
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Role
-                          </label>
-                          <select
-                            value={member.role}
-                            onChange={(e) =>
-                              updateTeamMember(index, "role", e.target.value)
-                            }
-                            className="w-full p-3 border border-gray-200 rounded-lg bg-white text-sm focus:ring-2 focus:ring-black focus:border-transparent"
-                          >
-                            {roleOptions.map((option) => (
-                              <option key={option.key} value={option.key}>
-                                {option.label} - {formatCurrency(option.price)}
-                                /month
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Headcount
-                          </label>
-                          <div className="flex items-center gap-2">
-                            <button
-                              onClick={() =>
-                                updateTeamMember(
-                                  index,
-                                  "quantity",
-                                  Math.max(1, member.quantity - 1)
-                                )
-                              }
-                              className="p-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                              aria-label="Decrease quantity"
-                            >
-                              <Minus className="w-4 h-4" />
-                            </button>
-                            <input
-                              type="number"
-                              min="1"
-                              value={member.quantity}
-                              onChange={(e) =>
-                                updateTeamMember(
-                                  index,
-                                  "quantity",
-                                  parseInt(e.target.value) || 1
-                                )
-                              }
-                              className="w-16 p-2 text-center border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-black focus:border-transparent"
-                            />
-                            <button
-                              onClick={() =>
-                                updateTeamMember(
-                                  index,
-                                  "quantity",
-                                  member.quantity + 1
-                                )
-                              }
-                              className="p-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                              aria-label="Increase quantity"
-                            >
-                              <Plus className="w-4 h-4" />
-                            </button>
-                          </div>
-                        </div>
-
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 mb-2">
-                            Duration (months)
-                          </label>
-                          <div className="flex items-center gap-2">
-                            <button
-                              onClick={() =>
-                                updateTeamMember(
-                                  index,
-                                  "months",
-                                  Math.max(1, member.months - 1)
-                                )
-                              }
-                              className="p-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                              aria-label="Decrease months"
-                            >
-                              <Minus className="w-4 h-4" />
-                            </button>
-                            <input
-                              type="number"
-                              min="1"
-                              value={member.months}
-                              onChange={(e) =>
-                                updateTeamMember(
-                                  index,
-                                  "months",
-                                  parseInt(e.target.value) || 1
-                                )
-                              }
-                              className="w-16 p-2 text-center border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-black focus:border-transparent"
-                            />
-                            <button
-                              onClick={() =>
-                                updateTeamMember(
-                                  index,
-                                  "months",
-                                  member.months + 1
-                                )
-                              }
-                              className="p-2 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                              aria-label="Increase months"
-                            >
-                              <Plus className="w-4 h-4" />
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="flex justify-between items-center pt-2 border-t border-gray-200">
-                        <span className="text-sm text-gray-600">Subtotal:</span>
-                        <span className="font-mono font-semibold text-black">
-                          {formatCurrency(
-                            member.price * member.months * member.quantity
-                          )}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
-                    <h4 className="text-sm font-medium text-gray-700 mb-3 text-center">
-                      Add Team Member
-                    </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {roleOptions.map((role) => (
+                  return availableRoles.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {availableRoles.map((role) => (
                         <button
                           key={role.key}
                           onClick={() => addTeamMember(role.key)}
-                          className="flex items-center justify-between p-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-left transition-colors group hover:shadow-sm"
+                          className="flex items-center justify-between p-4 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg text-left transition-colors group hover:shadow-sm"
                         >
                           <div className="flex-1">
                             <div className="text-sm font-medium text-gray-900 group-hover:text-black">
@@ -310,11 +168,127 @@ export function PricingSection() {
                         </button>
                       ))}
                     </div>
+                  ) : (
+                    <div className="text-center py-8">
+                      <p className="text-sm text-gray-500">
+                        All available team roles have been added
+                      </p>
+                    </div>
+                  );
+                })()}
+              </div>
+
+              <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm">
+                <div className="flex items-center gap-3 mb-6">
+                  <Users className="w-5 h-5 text-gray-600" />
+                  <h3 className="text-xl font-semibold text-black">
+                    Team Composition
+                  </h3>
+                </div>
+
+                <div className="bg-gray-50 rounded-lg border border-gray-200 overflow-hidden">
+                  <div className="hidden sm:grid sm:grid-cols-4 gap-6 p-4 bg-gray-100 border-b border-gray-200 text-sm font-medium text-gray-700">
+                    <div>Role</div>
+                    <div>Headcount</div>
+                    <div>Duration</div>
+                    <div>Subtotal</div>
                   </div>
+
+                  {teamMembers.map((member, index) => {
+                    const role = roleOptions.find((r) => r.key === member.role);
+                    return (
+                      <div
+                        key={index}
+                        className="grid sm:grid-cols-4 gap-6 p-4 border-b border-gray-200 last:border-b-0 bg-white items-center"
+                      >
+                        <div className="space-y-1">
+                          <div className="sm:hidden text-xs font-medium text-gray-500">
+                            Role
+                          </div>
+                          <div className="text-sm font-medium text-gray-900">
+                            {role?.label}
+                          </div>
+                        </div>
+
+                        <div className="space-y-1">
+                          <div className="sm:hidden text-xs font-medium text-gray-500">
+                            Headcount
+                          </div>
+                          <Select
+                            value={member.quantity.toString()}
+                            onValueChange={(value) =>
+                              updateTeamMember(
+                                index,
+                                "quantity",
+                                parseInt(value)
+                              )
+                            }
+                          >
+                            <SelectTrigger className="w-20">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {Array.from({ length: 10 }, (_, i) => i + 1).map(
+                                (num) => (
+                                  <SelectItem key={num} value={num.toString()}>
+                                    {num}
+                                  </SelectItem>
+                                )
+                              )}
+                            </SelectContent>
+                          </Select>
+                        </div>
+
+                        <div className="space-y-1">
+                          <div className="sm:hidden text-xs font-medium text-gray-500">
+                            Duration
+                          </div>
+                          <Select
+                            value={member.months.toString()}
+                            onValueChange={(value) =>
+                              updateTeamMember(index, "months", parseInt(value))
+                            }
+                          >
+                            <SelectTrigger className="w-24">
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              {Array.from({ length: 12 }, (_, i) => i + 1).map(
+                                (num) => (
+                                  <SelectItem key={num} value={num.toString()}>
+                                    {num} {num === 1 ? "month" : "months"}
+                                  </SelectItem>
+                                )
+                              )}
+                            </SelectContent>
+                          </Select>
+                        </div>
+
+                        <div className="space-y-1">
+                          <div className="sm:hidden text-xs font-medium text-gray-500">
+                            Subtotal
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <span className="font-mono font-semibold text-black">
+                              {formatCurrency(
+                                member.price * member.months * member.quantity
+                              )}
+                            </span>
+                            <button
+                              onClick={() => removeTeamMember(index)}
+                              disabled={teamMembers.length === 1}
+                              className="p-1 text-gray-400 hover:text-red-500 disabled:opacity-50 disabled:cursor-not-allowed ml-2"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
-              {/* Add-ons */}
               <div className="bg-white rounded-xl p-6 sm:p-8 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
                   <Calendar className="w-5 h-5 text-gray-600" />
@@ -352,43 +326,31 @@ export function PricingSection() {
                           {addon.enabled && (
                             <div className="flex items-center gap-2">
                               <span className="text-sm text-gray-600">
-                                Duration (months):
+                                Duration:
                               </span>
-                              <button
-                                onClick={() =>
-                                  updateAddon(
-                                    index,
-                                    "months",
-                                    Math.max(1, addon.months - 1)
-                                  )
+                              <Select
+                                value={addon.months.toString()}
+                                onValueChange={(value) =>
+                                  updateAddon(index, "months", parseInt(value))
                                 }
-                                className="p-1 border border-gray-200 rounded hover:bg-gray-100 transition-colors"
-                                aria-label="Decrease months"
                               >
-                                <Minus className="w-3 h-3" />
-                              </button>
-                              <input
-                                type="number"
-                                min="1"
-                                value={addon.months}
-                                onChange={(e) =>
-                                  updateAddon(
-                                    index,
-                                    "months",
-                                    parseInt(e.target.value) || 1
-                                  )
-                                }
-                                className="w-12 p-1 text-center border border-gray-200 rounded text-sm focus:ring-1 focus:ring-black focus:border-transparent"
-                              />
-                              <button
-                                onClick={() =>
-                                  updateAddon(index, "months", addon.months + 1)
-                                }
-                                className="p-1 border border-gray-200 rounded hover:bg-gray-100 transition-colors"
-                                aria-label="Increase months"
-                              >
-                                <Plus className="w-3 h-3" />
-                              </button>
+                                <SelectTrigger className="w-24">
+                                  <SelectValue />
+                                </SelectTrigger>
+                                <SelectContent>
+                                  {Array.from(
+                                    { length: 12 },
+                                    (_, i) => i + 1
+                                  ).map((num) => (
+                                    <SelectItem
+                                      key={num}
+                                      value={num.toString()}
+                                    >
+                                      {num} {num === 1 ? "month" : "months"}
+                                    </SelectItem>
+                                  ))}
+                                </SelectContent>
+                              </Select>
                               <span className="ml-auto font-mono font-semibold text-black">
                                 {formatCurrency(addon.price * addon.months)}
                               </span>
@@ -402,7 +364,6 @@ export function PricingSection() {
               </div>
             </div>
 
-            {/* Summary Section */}
             <div className="lg:sticky lg:top-8 h-fit">
               <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-8 shadow-lg">
                 <div className="flex items-center gap-3 mb-6">
@@ -413,7 +374,6 @@ export function PricingSection() {
                 </div>
 
                 <div className="space-y-4 mb-6">
-                  {/* Team summary */}
                   <div className="bg-gray-50 rounded-lg p-3 border border-gray-200">
                     <div className="flex justify-between items-center">
                       <span className="text-sm font-medium text-gray-700">
@@ -429,7 +389,6 @@ export function PricingSection() {
                     </div>
                   </div>
 
-                  {/* Team breakdown */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 mb-3">
                       Team Members
@@ -458,7 +417,6 @@ export function PricingSection() {
                     })}
                   </div>
 
-                  {/* Addons breakdown */}
                   {addons.some((addon) => addon.enabled) && (
                     <div className="border-t border-gray-200 pt-4">
                       <h4 className="text-sm font-medium text-gray-700 mb-3">
@@ -483,7 +441,6 @@ export function PricingSection() {
                   )}
                 </div>
 
-                {/* Total */}
                 <div className="border-t border-gray-200 pt-6">
                   <div className="flex justify-between items-center mb-6">
                     <span className="text-lg font-semibold text-black">
@@ -510,7 +467,6 @@ export function PricingSection() {
                   </div>
                 </div>
 
-                {/* Disclaimer */}
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <p className="text-xs text-gray-500 leading-relaxed">
                     This is an estimated budget based on standard rates. Final
@@ -520,7 +476,6 @@ export function PricingSection() {
                 </div>
               </div>
 
-              {/* Help section */}
               <div className="mt-6 bg-white rounded-xl p-6 border border-gray-200">
                 <h4 className="font-semibold text-black mb-3">
                   Don't know where to start?

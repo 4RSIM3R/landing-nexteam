@@ -6,6 +6,8 @@ import { SolutionSection } from "@/components/solution-section";
 import { TechStack } from "@/components/tech-stack";
 import { CaseStudies } from "@/components/case-studies";
 import { PricingSection } from "@/components/pricing-section";
+import { FAQSection } from "@/components/faq-section";
+import { FinalCTASection } from "@/components/final-cta-section";
 import { ArrowDownIcon, ArrowRightIcon } from "lucide-react";
 
 export default function Home() {
@@ -114,6 +116,12 @@ export default function Home() {
 
       {/* Pricing Section */}
       <PricingSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Final CTA Section */}
+      <FinalCTASection />
     </>
   );
 }
